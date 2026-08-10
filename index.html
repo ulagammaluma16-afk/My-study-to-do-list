@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Study To-Do List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div><p class="eyebrow">STUDY ROUTINE</p><h1>My Study To-Do List</h1><p>Study each semester paper twice a week and practise skills regularly.</p></div>
+      <label class="date-picker">📅 <input type="date" id="dateSelector" aria-label="Choose a date"></label>
+    </header>
+
+    <section class="routine-card">
+      <div><span class="routine-icon">◷</span><div><h2>Your evening study time</h2><p>Papers: twice weekly · Skills: regular practice.</p></div></div>
+      <div class="time-slots"><span>☾ <strong>6:30 PM – 10:00 PM</strong> Evening session</span><span>✦ <strong>Double Mode</strong> Paper + skill</span></div>
+    </section>
+
+    <section class="add-card">
+      <div class="section-title"><div><p class="eyebrow">ADD A TASK</p><h2>Plan a study session</h2></div></div>
+      <form id="taskForm" class="task-form">
+        <input id="taskName" required maxlength="100" placeholder="What will you study or practise?">
+        <select id="modeSelect" aria-label="Choose mode"><option value="paper">Paper mode</option><option value="skill">Skill mode</option><option value="double">Double mode: paper + skill</option></select>
+        <select id="paperSelect" aria-label="Choose paper"></select>
+        <select id="skillSelect" aria-label="Choose skill"></select>
+        <button type="submit">+ Add task</button>
+      </form>
+    </section>
+
+    <section class="list-section">
+        <div class="list-header"><div><p class="eyebrow">YOUR TASKS</p><h2>Evening study plan</h2><p id="taskCount" class="muted">0 tasks</p></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="paper">Papers</button><button class="filter" data-filter="skill">Skills</button><button class="filter" data-filter="double">Double mode</button><button class="filter" data-filter="pending">To do</button><button class="filter" data-filter="done">Done</button></div></div>
+      <div id="taskList" class="task-list"></div>
+      <p id="emptyState" class="empty" hidden>No tasks here yet. Add your first study task above.</p>
+    </section>
+
+    <section class="subjects-card">
+      <p class="eyebrow">YOUR PLAN</p><h2>Papers and skills</h2><p class="muted">Papers are planned twice weekly. Skills can be practised regularly.</p><div id="subjectChips" class="subject-chips"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
