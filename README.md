@@ -1,6 +1,6 @@
 # 🎓 Semester & Skills Dashboard
 
-A modern **one-page personal academic dashboard** created to showcase my **3rd semester papers, 6th semester papers, and technical skills** in one place.
+A modern **one-page personal academic dashboard** created to showcase my **3rd semester papers, 6  papers, and technical skills** in one place.
 
 ## 📌 About the Project
 
